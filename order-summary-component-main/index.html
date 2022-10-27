@@ -79,7 +79,7 @@
 			.pricing {
 				grid-area: d;
 				display: grid;
-				grid-template-columns: 1fr 1fr 1fr;
+				grid-template-columns: 0.75fr 1.25fr 1fr;
 				grid-template-rows: 1fr 1fr 1fr;
 				gap: 0px 0px;
 				grid-template-areas:
@@ -87,15 +87,17 @@
 					"icon price change"
 					"icon price .";
 				grid-area: d;
-				place-items: center;
+				place-items: start center;
 				align-items: center;
+        padding-left: 2rem;
+        padding-right: 2rem;
 			}
-			.icon {
-				align-self: center;
-				grid-area: icon;
+			.icon {	
+				grid-area: icon;     
 			}
 			.price {
 				grid-area: price;
+        place-items: center;    
 			}
 			.plan {
 				margin-bottom: 0rem;
@@ -125,6 +127,19 @@
         font-weight: 700;
 				border-radius: 0.4rem;
 			}
+      #a:hover {
+        background-color: hsl(245, 75%, 52%);
+        opacity: 0.7;
+        cursor: pointer;
+      }
+      a, a:active {
+        color:hsl(245, 75%, 52%);
+      }
+      a:hover {
+        color: hsl(245, 75%, 52%);
+        opacity: 0.8;
+        text-decoration: none;
+      }
       .cancel {
         grid-area: f;
         margin: 0 auto;
@@ -138,6 +153,9 @@
         font-weight: 900;
         font-family: "Red Hat Display", sans-serif;
         background-color: #ffffff;
+      }
+      #b:hover {
+        color:black;
       }
 		</style>
 	</head>
