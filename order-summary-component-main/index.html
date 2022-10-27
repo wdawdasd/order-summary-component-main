@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png" />
+
+		<title>Frontend Mentor | Order summary card</title>
+
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+		<style>
+			@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+			@media only screen and (max-width: 600px) {
+				.card {
+          
+					width: 500px;
+          height: auto;
+          grid-template-columns: 50vw;
+				}
+			}
+			.attribution {
+				font-size: 11px;
+				text-align: center;
+			}
+			.attribution a {
+				color: hsl(228, 45%, 44%);
+			}
+			body {
+				place-items: center;
+				place-content: center;
+				display: grid;
+				background-color: hsl(225, 100%, 94%);
+				font-family: "Red Hat Display", sans-serif;
+        background-image: url(./images/pattern-background-desktop.svg);
+			}
+			.card {
+				display: grid;
+				grid-template-columns: auto;
+				grid-template-rows: 1fr 1fr 0.75fr 1.25fr 1fr 1fr;
+				gap: 0px 0px;
+				grid-template-areas:
+					"a "
+					"b "
+					"c "
+					"d "
+					"e "
+          "f";
+				height: 40rem;
+				width: 30rem;
+				margin-top: 10vh;
+				background-color: #ffffff;
+				border-radius: 20px;
+		
+			}
+			.image {
+				grid-area: a;
+				width: 30rem;
+				border-radius: 20px 20px 0px 0px;
+			}
+			.title {
+				text-align: center;
+				grid-area: b;
+				color: hsl(223, 47%, 23%);
+			}
+			.description {
+				text-align: center;
+				padding-left: 3vw;
+				padding-right: 3vw;
+				color: hsl(224, 23%, 55%);
+				grid-area: c;
+			}
+			.pricing {
+				grid-area: d;
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				grid-template-rows: 1fr 1fr 1fr;
+				gap: 0px 0px;
+				grid-template-areas:
+					"icon price ."
+					"icon price change"
+					"icon price .";
+				grid-area: d;
+				place-items: center;
+				align-items: center;
+			}
+			.icon {
+				align-self: center;
+				grid-area: icon;
+			}
+			.price {
+				grid-area: price;
+			}
+			.plan {
+				margin-bottom: 0rem;
+				font-weight: 700;
+				color: hsl(223, 47%, 23%);
+			}
+			.pactual {
+				margin-top: 0.2rem;
+				font-weight: 500;
+				color: hsl(224, 23%, 55%);
+			}
+			.change {
+				grid-area: change;
+			}
+			.button {
+				grid-area: e;
+				margin: 0 auto;
+			}
+			#a {
+				padding-top: 1.5vh;
+				padding-bottom: 1.5vh;
+				width: 20vw;
+				background-color: hsl(245, 75%, 52%);
+				border: 0;
+        color: #ffffff;
+        font-family: "Red Hat Display", sans-serif;
+        font-weight: 700;
+				border-radius: 0.4rem;
+			}
+      .cancel {
+        grid-area: f;
+        margin: 0 auto;
+      }
+      #b {
+        padding-top: 1.5vh;
+				padding-bottom: 1.5vh;
+				width: 20vw;
+        border: 0px;
+        color: hsl(224, 23%, 55%);
+        font-weight: 900;
+        font-family: "Red Hat Display", sans-serif;
+        background-color: #ffffff;
+      }
+		</style>
+	</head>
+	<body>
+		<div class="card">
+			<img class="image" src="./images/illustration-hero.svg" alt="" />
+			<div class="title">
+				<h1>Order Summary</h1>
+			</div>
+			<main class="description">
+				<p>
+					You can now listen to millions of songs, audiobooks, and podcasts on
+					any device anywhere you like!
+				</p>
+			</main>
+			<div class="pricing">
+				<img class="icon" src="./images/icon-music.svg" alt="" />
+				<div class="price">
+					<p class="plan">Annual Price</p>
+					<p class="pactual">$59.99/year</p>
+				</div>
+				<a href="#" class="change">Change</a>
+			</div>
+			<div class="button">
+				<button id="a">Proceed to payment</button>
+			</div>
+      <div class="cancel">
+        <button id="b">Cancel Order</button>
+      </div>
+		</div>
+	</body>
+</html>
